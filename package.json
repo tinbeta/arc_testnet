@@ -1,0 +1,14 @@
+{
+  "name": "esc_app",
+  "private": true,
+  "workspaces": [
+    "contracts",
+    "frontend"
+  ],
+  "scripts": {
+    "bootstrap": "npm --workspaces install",
+    "compile": "npm --workspace contracts run compile-and-copy",
+    "dev": "npm --workspace frontend run dev"
+  }
+}
+

@@ -1,0 +1,19 @@
+0 verbose cli /Users/tinanpha/.nvm/versions/node/v24.11.0/bin/node /Users/tinanpha/.nvm/versions/node/v24.11.0/bin/npm
+1 info using npm@11.6.1
+2 info using node@v24.11.0
+3 silly config load:file:/Users/tinanpha/.nvm/versions/node/v24.11.0/lib/node_modules/npm/npmrc
+4 silly config load:file:/Users/tinanpha/Desktop/esc_app/.npmrc
+5 silly config load:file:/Users/tinanpha/.npmrc
+6 silly config load:file:/Users/tinanpha/.nvm/versions/node/v24.11.0/etc/npmrc
+7 verbose title npm run compile-and-copy
+8 verbose argv "--workspace" "contracts" "run" "compile-and-copy"
+9 verbose logfile logs-max:10 dir:/Users/tinanpha/Desktop/esc_app/.npm-cache/_logs/2025-10-31T13_21_05_526Z-
+10 verbose logfile /Users/tinanpha/Desktop/esc_app/.npm-cache/_logs/2025-10-31T13_21_05_526Z-debug-0.log
+11 silly logfile start cleaning logs, removing 1 files
+12 silly logfile done cleaning log files
+13 verbose cwd /Users/tinanpha/Desktop/esc_app
+14 verbose os Darwin 25.0.0
+15 verbose node v24.11.0
+16 verbose npm  v11.6.1
+17 verbose exit 0
+18 info ok

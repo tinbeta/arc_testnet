@@ -1,0 +1,395 @@
+0 verbose cli /Users/tinanpha/.nvm/versions/node/v24.11.0/bin/node /Users/tinanpha/.nvm/versions/node/v24.11.0/bin/npm
+1 info using npm@11.6.1
+2 info using node@v24.11.0
+3 silly config load:file:/Users/tinanpha/.nvm/versions/node/v24.11.0/lib/node_modules/npm/npmrc
+4 silly config load:file:/Users/tinanpha/Desktop/esc_app/.npmrc
+5 silly config load:file:/Users/tinanpha/.npmrc
+6 silly config load:file:/Users/tinanpha/.nvm/versions/node/v24.11.0/etc/npmrc
+7 verbose title npm i @vitejs/plugin-react
+8 verbose argv "--workspace" "frontend" "i" "--save-dev" "@vitejs/plugin-react"
+9 verbose logfile logs-max:10 dir:/Users/tinanpha/Desktop/esc_app/.npm-cache/_logs/2025-10-31T13_23_15_579Z-
+10 verbose logfile /Users/tinanpha/Desktop/esc_app/.npm-cache/_logs/2025-10-31T13_23_15_579Z-debug-0.log
+11 silly logfile start cleaning logs, removing 1 files
+12 silly logfile done cleaning log files
+13 silly packumentCache heap:4496293888 maxSize:1124073472 maxEntrySize:562036736
+14 verbose shrinkwrap failed to load node_modules/.package-lock.json out of date, updated: frontend
+15 silly idealTree buildDeps
+16 silly fetch manifest @vitejs/plugin-react@^5.1.0
+17 silly packumentCache full:https://registry.npmjs.org/@vitejs%2fplugin-react cache-miss
+18 http cache https://registry.npmjs.org/@vitejs%2fplugin-react 24ms (cache hit)
+19 silly packumentCache full:https://registry.npmjs.org/@vitejs%2fplugin-react set size:239462 disposed:false
+20 silly fetch manifest vite@^5.4.9
+21 silly packumentCache full:https://registry.npmjs.org/vite cache-miss
+22 http cache https://registry.npmjs.org/vite 119ms (cache hit)
+23 silly packumentCache full:https://registry.npmjs.org/vite set size:38591175 disposed:false
+24 silly fetch manifest @types/node@^18.0.0 || >=20.0.0
+25 silly packumentCache full:https://registry.npmjs.org/@types%2fnode cache-miss
+26 http cache https://registry.npmjs.org/@types%2fnode 11ms (cache hit)
+27 silly packumentCache full:https://registry.npmjs.org/@types%2fnode set size:10675696 disposed:false
+28 silly fetch manifest less@*
+29 silly packumentCache full:https://registry.npmjs.org/less cache-miss
+30 http cache https://registry.npmjs.org/less 1ms (cache hit)
+31 silly packumentCache full:https://registry.npmjs.org/less set size:425893 disposed:false
+32 silly fetch manifest lightningcss@^1.21.0
+33 silly packumentCache full:https://registry.npmjs.org/lightningcss cache-miss
+34 http cache https://registry.npmjs.org/lightningcss 1ms (cache hit)
+35 silly packumentCache full:https://registry.npmjs.org/lightningcss set size:173815 disposed:false
+36 silly fetch manifest sass@*
+37 silly packumentCache full:https://registry.npmjs.org/sass cache-miss
+38 http cache https://registry.npmjs.org/sass 2ms (cache hit)
+39 silly packumentCache full:https://registry.npmjs.org/sass set size:697197 disposed:false
+40 silly fetch manifest sass-embedded@*
+41 silly packumentCache full:https://registry.npmjs.org/sass-embedded cache-miss
+42 http cache https://registry.npmjs.org/sass-embedded 1ms (cache hit)
+43 silly packumentCache full:https://registry.npmjs.org/sass-embedded set size:379146 disposed:false
+44 silly fetch manifest stylus@*
+45 silly packumentCache full:https://registry.npmjs.org/stylus cache-miss
+46 http cache https://registry.npmjs.org/stylus 1ms (cache hit)
+47 silly packumentCache full:https://registry.npmjs.org/stylus set size:286766 disposed:false
+48 silly fetch manifest sugarss@*
+49 silly packumentCache full:https://registry.npmjs.org/sugarss cache-miss
+50 http cache https://registry.npmjs.org/sugarss 1ms (cache hit)
+51 silly packumentCache full:https://registry.npmjs.org/sugarss set size:44975 disposed:false
+52 silly fetch manifest postcss@^8.3.3
+53 silly packumentCache full:https://registry.npmjs.org/postcss cache-miss
+54 http cache https://registry.npmjs.org/postcss 1ms (cache hit)
+55 silly packumentCache full:https://registry.npmjs.org/postcss set size:696248 disposed:false
+56 silly fetch manifest terser@^5.4.0
+57 silly packumentCache full:https://registry.npmjs.org/terser cache-miss
+58 http cache https://registry.npmjs.org/terser 2ms (cache hit)
+59 silly packumentCache full:https://registry.npmjs.org/terser set size:776798 disposed:false
+60 silly placeDep ROOT @vitejs/plugin-react@5.1.0 REPLACE for: esc_app-frontend@1.0.0 want: ^5.1.0
+61 silly reify moves {}
+62 silly audit bulk request {
+62 silly audit   'esc_app-frontend': [ '1.0.0' ],
+62 silly audit   '@adraffy/ens-normalize': [ '1.10.1' ],
+62 silly audit   '@babel/code-frame': [ '7.27.1' ],
+62 silly audit   '@babel/compat-data': [ '7.28.5' ],
+62 silly audit   '@babel/core': [ '7.28.5' ],
+62 silly audit   '@babel/generator': [ '7.28.5' ],
+62 silly audit   '@jridgewell/trace-mapping': [ '0.3.31' ],
+62 silly audit   '@babel/helper-compilation-targets': [ '7.27.2' ],
+62 silly audit   'lru-cache': [ '5.1.1' ],
+62 silly audit   '@babel/helper-globals': [ '7.28.0' ],
+62 silly audit   '@babel/helper-module-imports': [ '7.27.1' ],
+62 silly audit   '@babel/helper-module-transforms': [ '7.28.3' ],
+62 silly audit   '@babel/helper-plugin-utils': [ '7.27.1' ],
+62 silly audit   '@babel/helper-string-parser': [ '7.27.1' ],
+62 silly audit   '@babel/helper-validator-identifier': [ '7.28.5' ],
+62 silly audit   '@babel/helper-validator-option': [ '7.27.1' ],
+62 silly audit   '@babel/helpers': [ '7.28.4' ],
+62 silly audit   '@babel/parser': [ '7.28.5' ],
+62 silly audit   '@babel/plugin-transform-react-jsx-self': [ '7.27.1' ],
+62 silly audit   '@babel/plugin-transform-react-jsx-source': [ '7.27.1' ],
+62 silly audit   '@babel/template': [ '7.27.2' ],
+62 silly audit   '@babel/traverse': [ '7.28.5' ],
+62 silly audit   '@babel/types': [ '7.28.5' ],
+62 silly audit   '@esbuild/aix-ppc64': [ '0.21.5' ],
+62 silly audit   '@esbuild/android-arm': [ '0.21.5' ],
+62 silly audit   '@esbuild/android-arm64': [ '0.21.5' ],
+62 silly audit   '@esbuild/android-x64': [ '0.21.5' ],
+62 silly audit   '@esbuild/darwin-arm64': [ '0.21.5' ],
+62 silly audit   '@esbuild/darwin-x64': [ '0.21.5' ],
+62 silly audit   '@esbuild/freebsd-arm64': [ '0.21.5' ],
+62 silly audit   '@esbuild/freebsd-x64': [ '0.21.5' ],
+62 silly audit   '@esbuild/linux-arm': [ '0.21.5' ],
+62 silly audit   '@esbuild/linux-arm64': [ '0.21.5' ],
+62 silly audit   '@esbuild/linux-ia32': [ '0.21.5' ],
+62 silly audit   '@esbuild/linux-loong64': [ '0.21.5' ],
+62 silly audit   '@esbuild/linux-mips64el': [ '0.21.5' ],
+62 silly audit   '@esbuild/linux-ppc64': [ '0.21.5' ],
+62 silly audit   '@esbuild/linux-riscv64': [ '0.21.5' ],
+62 silly audit   '@esbuild/linux-s390x': [ '0.21.5' ],
+62 silly audit   '@esbuild/linux-x64': [ '0.21.5' ],
+62 silly audit   '@esbuild/netbsd-x64': [ '0.21.5' ],
+62 silly audit   '@esbuild/openbsd-x64': [ '0.21.5' ],
+62 silly audit   '@esbuild/sunos-x64': [ '0.21.5' ],
+62 silly audit   '@esbuild/win32-arm64': [ '0.21.5' ],
+62 silly audit   '@esbuild/win32-ia32': [ '0.21.5' ],
+62 silly audit   '@esbuild/win32-x64': [ '0.21.5' ],
+62 silly audit   '@noble/curves': [ '1.2.0' ],
+62 silly audit   '@noble/hashes': [ '1.3.2' ],
+62 silly audit   'aes-js': [ '4.0.0-beta.5' ],
+62 silly audit   ws: [ '8.17.1' ],
+62 silly audit   '@jridgewell/gen-mapping': [ '0.3.13' ],
+62 silly audit   '@jridgewell/remapping': [ '2.3.5' ],
+62 silly audit   '@jridgewell/resolve-uri': [ '3.1.2' ],
+62 silly audit   '@jridgewell/sourcemap-codec': [ '1.5.5' ],
+62 silly audit   '@rolldown/pluginutils': [ '1.0.0-beta.43' ],
+62 silly audit   '@rollup/rollup-android-arm-eabi': [ '4.52.5' ],
+62 silly audit   '@rollup/rollup-android-arm64': [ '4.52.5' ],
+62 silly audit   '@rollup/rollup-darwin-arm64': [ '4.52.5' ],
+62 silly audit   '@rollup/rollup-darwin-x64': [ '4.52.5' ],
+62 silly audit   '@rollup/rollup-freebsd-arm64': [ '4.52.5' ],
+62 silly audit   '@rollup/rollup-freebsd-x64': [ '4.52.5' ],
+62 silly audit   '@rollup/rollup-linux-arm-gnueabihf': [ '4.52.5' ],
+62 silly audit   '@rollup/rollup-linux-arm-musleabihf': [ '4.52.5' ],
+62 silly audit   '@rollup/rollup-linux-arm64-gnu': [ '4.52.5' ],
+62 silly audit   '@rollup/rollup-linux-arm64-musl': [ '4.52.5' ],
+62 silly audit   '@rollup/rollup-linux-loong64-gnu': [ '4.52.5' ],
+62 silly audit   '@rollup/rollup-linux-ppc64-gnu': [ '4.52.5' ],
+62 silly audit   '@rollup/rollup-linux-riscv64-gnu': [ '4.52.5' ],
+62 silly audit   '@rollup/rollup-linux-riscv64-musl': [ '4.52.5' ],
+62 silly audit   '@rollup/rollup-linux-s390x-gnu': [ '4.52.5' ],
+62 silly audit   '@rollup/rollup-linux-x64-gnu': [ '4.52.5' ],
+62 silly audit   '@rollup/rollup-linux-x64-musl': [ '4.52.5' ],
+62 silly audit   '@rollup/rollup-openharmony-arm64': [ '4.52.5' ],
+62 silly audit   '@rollup/rollup-win32-arm64-msvc': [ '4.52.5' ],
+62 silly audit   '@rollup/rollup-win32-ia32-msvc': [ '4.52.5' ],
+62 silly audit   '@rollup/rollup-win32-x64-gnu': [ '4.52.5' ],
+62 silly audit   '@rollup/rollup-win32-x64-msvc': [ '4.52.5' ],
+62 silly audit   tslib: [ '2.7.0' ],
+62 silly audit   '@types/babel__core': [ '7.20.5' ],
+62 silly audit   '@types/babel__generator': [ '7.27.0' ],
+62 silly audit   '@types/babel__template': [ '7.4.4' ],
+62 silly audit   '@types/babel__traverse': [ '7.28.0' ],
+62 silly audit   '@types/estree': [ '1.0.8' ],
+62 silly audit   '@types/node': [ '24.9.2', '22.7.5' ],
+62 silly audit   '@types/prop-types': [ '15.7.15' ],
+62 silly audit   '@types/react': [ '18.3.26' ],
+62 silly audit   '@types/react-dom': [ '18.3.7' ],
+62 silly audit   'baseline-browser-mapping': [ '2.8.21' ],
+62 silly audit   browserslist: [ '4.27.0' ],
+62 silly audit   'caniuse-lite': [ '1.0.30001752' ],
+62 silly audit   'convert-source-map': [ '2.0.0' ],
+62 silly audit   csstype: [ '3.1.3' ],
+62 silly audit   debug: [ '4.4.3' ],
+62 silly audit   'electron-to-chromium': [ '1.5.244' ],
+62 silly audit   esbuild: [ '0.21.5' ],
+62 silly audit   escalade: [ '3.2.0' ],
+62 silly audit   ethers: [ '6.15.0' ],
+62 silly audit   'undici-types': [ '6.19.8', '7.16.0' ],
+62 silly audit   fsevents: [ '2.3.3' ],
+62 silly audit   gensync: [ '1.0.0-beta.2' ],
+62 silly audit   'js-tokens': [ '4.0.0' ],
+62 silly audit   jsesc: [ '3.1.0' ],
+62 silly audit   json5: [ '2.2.3' ],
+62 silly audit   'loose-envify': [ '1.4.0' ],
+62 silly audit   ms: [ '2.1.3' ],
+62 silly audit   nanoid: [ '3.3.11' ],
+62 silly audit   'node-releases': [ '2.0.27' ],
+62 silly audit   picocolors: [ '1.1.1' ],
+62 silly audit   postcss: [ '8.5.6' ],
+62 silly audit   react: [ '18.3.1' ],
+62 silly audit   'react-dom': [ '18.3.1' ],
+62 silly audit   'react-refresh': [ '0.18.0' ],
+62 silly audit   rollup: [ '4.52.5' ],
+62 silly audit   scheduler: [ '0.23.2' ],
+62 silly audit   semver: [ '6.3.1' ],
+62 silly audit   'source-map-js': [ '1.2.1' ],
+62 silly audit   typescript: [ '5.9.3' ],
+62 silly audit   'update-browserslist-db': [ '1.1.4' ],
+62 silly audit   vite: [ '5.4.21' ],
+62 silly audit   yallist: [ '3.1.1' ],
+62 silly audit   '@vitejs/plugin-react': [ '5.1.0' ]
+62 silly audit }
+63 verbose reify failed optional dependency /Users/tinanpha/Desktop/esc_app/node_modules/@rollup/rollup-win32-x64-msvc
+64 silly reify mark deleted [
+64 silly reify   '/Users/tinanpha/Desktop/esc_app/node_modules/@rollup/rollup-win32-x64-msvc'
+64 silly reify ]
+65 verbose reify failed optional dependency /Users/tinanpha/Desktop/esc_app/node_modules/@rollup/rollup-win32-x64-gnu
+66 silly reify mark deleted [
+66 silly reify   '/Users/tinanpha/Desktop/esc_app/node_modules/@rollup/rollup-win32-x64-gnu'
+66 silly reify ]
+67 verbose reify failed optional dependency /Users/tinanpha/Desktop/esc_app/node_modules/@rollup/rollup-win32-ia32-msvc
+68 silly reify mark deleted [
+68 silly reify   '/Users/tinanpha/Desktop/esc_app/node_modules/@rollup/rollup-win32-ia32-msvc'
+68 silly reify ]
+69 verbose reify failed optional dependency /Users/tinanpha/Desktop/esc_app/node_modules/@rollup/rollup-win32-arm64-msvc
+70 silly reify mark deleted [
+70 silly reify   '/Users/tinanpha/Desktop/esc_app/node_modules/@rollup/rollup-win32-arm64-msvc'
+70 silly reify ]
+71 verbose reify failed optional dependency /Users/tinanpha/Desktop/esc_app/node_modules/@rollup/rollup-openharmony-arm64
+72 silly reify mark deleted [
+72 silly reify   '/Users/tinanpha/Desktop/esc_app/node_modules/@rollup/rollup-openharmony-arm64'
+72 silly reify ]
+73 verbose reify failed optional dependency /Users/tinanpha/Desktop/esc_app/node_modules/@rollup/rollup-linux-x64-musl
+74 silly reify mark deleted [
+74 silly reify   '/Users/tinanpha/Desktop/esc_app/node_modules/@rollup/rollup-linux-x64-musl'
+74 silly reify ]
+75 verbose reify failed optional dependency /Users/tinanpha/Desktop/esc_app/node_modules/@rollup/rollup-linux-x64-gnu
+76 silly reify mark deleted [
+76 silly reify   '/Users/tinanpha/Desktop/esc_app/node_modules/@rollup/rollup-linux-x64-gnu'
+76 silly reify ]
+77 verbose reify failed optional dependency /Users/tinanpha/Desktop/esc_app/node_modules/@rollup/rollup-linux-s390x-gnu
+78 silly reify mark deleted [
+78 silly reify   '/Users/tinanpha/Desktop/esc_app/node_modules/@rollup/rollup-linux-s390x-gnu'
+78 silly reify ]
+79 verbose reify failed optional dependency /Users/tinanpha/Desktop/esc_app/node_modules/@rollup/rollup-linux-riscv64-musl
+80 silly reify mark deleted [
+80 silly reify   '/Users/tinanpha/Desktop/esc_app/node_modules/@rollup/rollup-linux-riscv64-musl'
+80 silly reify ]
+81 verbose reify failed optional dependency /Users/tinanpha/Desktop/esc_app/node_modules/@rollup/rollup-linux-riscv64-gnu
+82 silly reify mark deleted [
+82 silly reify   '/Users/tinanpha/Desktop/esc_app/node_modules/@rollup/rollup-linux-riscv64-gnu'
+82 silly reify ]
+83 verbose reify failed optional dependency /Users/tinanpha/Desktop/esc_app/node_modules/@rollup/rollup-linux-ppc64-gnu
+84 silly reify mark deleted [
+84 silly reify   '/Users/tinanpha/Desktop/esc_app/node_modules/@rollup/rollup-linux-ppc64-gnu'
+84 silly reify ]
+85 verbose reify failed optional dependency /Users/tinanpha/Desktop/esc_app/node_modules/@rollup/rollup-linux-loong64-gnu
+86 silly reify mark deleted [
+86 silly reify   '/Users/tinanpha/Desktop/esc_app/node_modules/@rollup/rollup-linux-loong64-gnu'
+86 silly reify ]
+87 verbose reify failed optional dependency /Users/tinanpha/Desktop/esc_app/node_modules/@rollup/rollup-linux-arm64-musl
+88 silly reify mark deleted [
+88 silly reify   '/Users/tinanpha/Desktop/esc_app/node_modules/@rollup/rollup-linux-arm64-musl'
+88 silly reify ]
+89 verbose reify failed optional dependency /Users/tinanpha/Desktop/esc_app/node_modules/@rollup/rollup-linux-arm64-gnu
+90 silly reify mark deleted [
+90 silly reify   '/Users/tinanpha/Desktop/esc_app/node_modules/@rollup/rollup-linux-arm64-gnu'
+90 silly reify ]
+91 verbose reify failed optional dependency /Users/tinanpha/Desktop/esc_app/node_modules/@rollup/rollup-linux-arm-musleabihf
+92 silly reify mark deleted [
+92 silly reify   '/Users/tinanpha/Desktop/esc_app/node_modules/@rollup/rollup-linux-arm-musleabihf'
+92 silly reify ]
+93 verbose reify failed optional dependency /Users/tinanpha/Desktop/esc_app/node_modules/@rollup/rollup-linux-arm-gnueabihf
+94 silly reify mark deleted [
+94 silly reify   '/Users/tinanpha/Desktop/esc_app/node_modules/@rollup/rollup-linux-arm-gnueabihf'
+94 silly reify ]
+95 verbose reify failed optional dependency /Users/tinanpha/Desktop/esc_app/node_modules/@rollup/rollup-freebsd-x64
+96 silly reify mark deleted [
+96 silly reify   '/Users/tinanpha/Desktop/esc_app/node_modules/@rollup/rollup-freebsd-x64'
+96 silly reify ]
+97 verbose reify failed optional dependency /Users/tinanpha/Desktop/esc_app/node_modules/@rollup/rollup-freebsd-arm64
+98 silly reify mark deleted [
+98 silly reify   '/Users/tinanpha/Desktop/esc_app/node_modules/@rollup/rollup-freebsd-arm64'
+98 silly reify ]
+99 verbose reify failed optional dependency /Users/tinanpha/Desktop/esc_app/node_modules/@rollup/rollup-darwin-x64
+100 silly reify mark deleted [
+100 silly reify   '/Users/tinanpha/Desktop/esc_app/node_modules/@rollup/rollup-darwin-x64'
+100 silly reify ]
+101 verbose reify failed optional dependency /Users/tinanpha/Desktop/esc_app/node_modules/@rollup/rollup-android-arm64
+102 silly reify mark deleted [
+102 silly reify   '/Users/tinanpha/Desktop/esc_app/node_modules/@rollup/rollup-android-arm64'
+102 silly reify ]
+103 verbose reify failed optional dependency /Users/tinanpha/Desktop/esc_app/node_modules/@rollup/rollup-android-arm-eabi
+104 silly reify mark deleted [
+104 silly reify   '/Users/tinanpha/Desktop/esc_app/node_modules/@rollup/rollup-android-arm-eabi'
+104 silly reify ]
+105 verbose reify failed optional dependency /Users/tinanpha/Desktop/esc_app/node_modules/@esbuild/win32-x64
+106 silly reify mark deleted [ '/Users/tinanpha/Desktop/esc_app/node_modules/@esbuild/win32-x64' ]
+107 verbose reify failed optional dependency /Users/tinanpha/Desktop/esc_app/node_modules/@esbuild/win32-ia32
+108 silly reify mark deleted [ '/Users/tinanpha/Desktop/esc_app/node_modules/@esbuild/win32-ia32' ]
+109 verbose reify failed optional dependency /Users/tinanpha/Desktop/esc_app/node_modules/@esbuild/win32-arm64
+110 silly reify mark deleted [ '/Users/tinanpha/Desktop/esc_app/node_modules/@esbuild/win32-arm64' ]
+111 verbose reify failed optional dependency /Users/tinanpha/Desktop/esc_app/node_modules/@esbuild/sunos-x64
+112 silly reify mark deleted [ '/Users/tinanpha/Desktop/esc_app/node_modules/@esbuild/sunos-x64' ]
+113 verbose reify failed optional dependency /Users/tinanpha/Desktop/esc_app/node_modules/@esbuild/openbsd-x64
+114 silly reify mark deleted [ '/Users/tinanpha/Desktop/esc_app/node_modules/@esbuild/openbsd-x64' ]
+115 verbose reify failed optional dependency /Users/tinanpha/Desktop/esc_app/node_modules/@esbuild/netbsd-x64
+116 silly reify mark deleted [ '/Users/tinanpha/Desktop/esc_app/node_modules/@esbuild/netbsd-x64' ]
+117 verbose reify failed optional dependency /Users/tinanpha/Desktop/esc_app/node_modules/@esbuild/linux-x64
+118 silly reify mark deleted [ '/Users/tinanpha/Desktop/esc_app/node_modules/@esbuild/linux-x64' ]
+119 verbose reify failed optional dependency /Users/tinanpha/Desktop/esc_app/node_modules/@esbuild/linux-s390x
+120 silly reify mark deleted [ '/Users/tinanpha/Desktop/esc_app/node_modules/@esbuild/linux-s390x' ]
+121 verbose reify failed optional dependency /Users/tinanpha/Desktop/esc_app/node_modules/@esbuild/linux-riscv64
+122 silly reify mark deleted [
+122 silly reify   '/Users/tinanpha/Desktop/esc_app/node_modules/@esbuild/linux-riscv64'
+122 silly reify ]
+123 verbose reify failed optional dependency /Users/tinanpha/Desktop/esc_app/node_modules/@esbuild/linux-ppc64
+124 silly reify mark deleted [ '/Users/tinanpha/Desktop/esc_app/node_modules/@esbuild/linux-ppc64' ]
+125 verbose reify failed optional dependency /Users/tinanpha/Desktop/esc_app/node_modules/@esbuild/linux-mips64el
+126 silly reify mark deleted [
+126 silly reify   '/Users/tinanpha/Desktop/esc_app/node_modules/@esbuild/linux-mips64el'
+126 silly reify ]
+127 verbose reify failed optional dependency /Users/tinanpha/Desktop/esc_app/node_modules/@esbuild/linux-loong64
+128 silly reify mark deleted [
+128 silly reify   '/Users/tinanpha/Desktop/esc_app/node_modules/@esbuild/linux-loong64'
+128 silly reify ]
+129 verbose reify failed optional dependency /Users/tinanpha/Desktop/esc_app/node_modules/@esbuild/linux-ia32
+130 silly reify mark deleted [ '/Users/tinanpha/Desktop/esc_app/node_modules/@esbuild/linux-ia32' ]
+131 verbose reify failed optional dependency /Users/tinanpha/Desktop/esc_app/node_modules/@esbuild/linux-arm64
+132 silly reify mark deleted [ '/Users/tinanpha/Desktop/esc_app/node_modules/@esbuild/linux-arm64' ]
+133 verbose reify failed optional dependency /Users/tinanpha/Desktop/esc_app/node_modules/@esbuild/linux-arm
+134 silly reify mark deleted [ '/Users/tinanpha/Desktop/esc_app/node_modules/@esbuild/linux-arm' ]
+135 verbose reify failed optional dependency /Users/tinanpha/Desktop/esc_app/node_modules/@esbuild/freebsd-x64
+136 silly reify mark deleted [ '/Users/tinanpha/Desktop/esc_app/node_modules/@esbuild/freebsd-x64' ]
+137 verbose reify failed optional dependency /Users/tinanpha/Desktop/esc_app/node_modules/@esbuild/freebsd-arm64
+138 silly reify mark deleted [
+138 silly reify   '/Users/tinanpha/Desktop/esc_app/node_modules/@esbuild/freebsd-arm64'
+138 silly reify ]
+139 verbose reify failed optional dependency /Users/tinanpha/Desktop/esc_app/node_modules/@esbuild/darwin-x64
+140 silly reify mark deleted [ '/Users/tinanpha/Desktop/esc_app/node_modules/@esbuild/darwin-x64' ]
+141 verbose reify failed optional dependency /Users/tinanpha/Desktop/esc_app/node_modules/@esbuild/android-x64
+142 silly reify mark deleted [ '/Users/tinanpha/Desktop/esc_app/node_modules/@esbuild/android-x64' ]
+143 verbose reify failed optional dependency /Users/tinanpha/Desktop/esc_app/node_modules/@esbuild/android-arm64
+144 silly reify mark deleted [
+144 silly reify   '/Users/tinanpha/Desktop/esc_app/node_modules/@esbuild/android-arm64'
+144 silly reify ]
+145 verbose reify failed optional dependency /Users/tinanpha/Desktop/esc_app/node_modules/@esbuild/android-arm
+146 silly reify mark deleted [ '/Users/tinanpha/Desktop/esc_app/node_modules/@esbuild/android-arm' ]
+147 verbose reify failed optional dependency /Users/tinanpha/Desktop/esc_app/node_modules/@esbuild/aix-ppc64
+148 silly reify mark deleted [ '/Users/tinanpha/Desktop/esc_app/node_modules/@esbuild/aix-ppc64' ]
+149 http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 588ms
+150 silly audit report {
+150 silly audit report   esbuild: [
+150 silly audit report     {
+150 silly audit report       id: 1102341,
+150 silly audit report       url: 'https://github.com/advisories/GHSA-67mh-4wv8-2f99',
+150 silly audit report       title: 'esbuild enables any website to send any requests to the development server and read the response',
+150 silly audit report       severity: 'moderate',
+150 silly audit report       vulnerable_versions: '<=0.24.2',
+150 silly audit report       cwe: [Array],
+150 silly audit report       cvss: [Object]
+150 silly audit report     }
+150 silly audit report   ]
+150 silly audit report }
+151 silly packumentCache corgi:https://registry.npmjs.org/esbuild cache-miss
+152 http cache https://registry.npmjs.org/esbuild 4ms (cache hit)
+153 silly packumentCache corgi:https://registry.npmjs.org/esbuild set size:869842 disposed:false
+154 silly packumentCache corgi:https://registry.npmjs.org/vite cache-miss
+155 http cache https://registry.npmjs.org/vite 5ms (cache hit)
+156 silly packumentCache corgi:https://registry.npmjs.org/vite set size:2112523 disposed:false
+157 silly packumentCache corgi:https://registry.npmjs.org/@vitejs%2fplugin-react cache-miss
+158 http cache https://registry.npmjs.org/@vitejs%2fplugin-react 7ms (cache hit)
+159 silly packumentCache corgi:https://registry.npmjs.org/@vitejs%2fplugin-react set size:102396 disposed:false
+160 silly ADD node_modules/@rollup/rollup-win32-x64-msvc
+161 silly ADD node_modules/@rollup/rollup-win32-x64-gnu
+162 silly ADD node_modules/@rollup/rollup-win32-ia32-msvc
+163 silly ADD node_modules/@rollup/rollup-win32-arm64-msvc
+164 silly ADD node_modules/@rollup/rollup-openharmony-arm64
+165 silly ADD node_modules/@rollup/rollup-linux-x64-musl
+166 silly ADD node_modules/@rollup/rollup-linux-x64-gnu
+167 silly ADD node_modules/@rollup/rollup-linux-s390x-gnu
+168 silly ADD node_modules/@rollup/rollup-linux-riscv64-musl
+169 silly ADD node_modules/@rollup/rollup-linux-riscv64-gnu
+170 silly ADD node_modules/@rollup/rollup-linux-ppc64-gnu
+171 silly ADD node_modules/@rollup/rollup-linux-loong64-gnu
+172 silly ADD node_modules/@rollup/rollup-linux-arm64-musl
+173 silly ADD node_modules/@rollup/rollup-linux-arm64-gnu
+174 silly ADD node_modules/@rollup/rollup-linux-arm-musleabihf
+175 silly ADD node_modules/@rollup/rollup-linux-arm-gnueabihf
+176 silly ADD node_modules/@rollup/rollup-freebsd-x64
+177 silly ADD node_modules/@rollup/rollup-freebsd-arm64
+178 silly ADD node_modules/@rollup/rollup-darwin-x64
+179 silly ADD node_modules/@rollup/rollup-android-arm64
+180 silly ADD node_modules/@rollup/rollup-android-arm-eabi
+181 silly ADD node_modules/@esbuild/win32-x64
+182 silly ADD node_modules/@esbuild/win32-ia32
+183 silly ADD node_modules/@esbuild/win32-arm64
+184 silly ADD node_modules/@esbuild/sunos-x64
+185 silly ADD node_modules/@esbuild/openbsd-x64
+186 silly ADD node_modules/@esbuild/netbsd-x64
+187 silly ADD node_modules/@esbuild/linux-x64
+188 silly ADD node_modules/@esbuild/linux-s390x
+189 silly ADD node_modules/@esbuild/linux-riscv64
+190 silly ADD node_modules/@esbuild/linux-ppc64
+191 silly ADD node_modules/@esbuild/linux-mips64el
+192 silly ADD node_modules/@esbuild/linux-loong64
+193 silly ADD node_modules/@esbuild/linux-ia32
+194 silly ADD node_modules/@esbuild/linux-arm64
+195 silly ADD node_modules/@esbuild/linux-arm
+196 silly ADD node_modules/@esbuild/freebsd-x64
+197 silly ADD node_modules/@esbuild/freebsd-arm64
+198 silly ADD node_modules/@esbuild/darwin-x64
+199 silly ADD node_modules/@esbuild/android-x64
+200 silly ADD node_modules/@esbuild/android-arm64
+201 silly ADD node_modules/@esbuild/android-arm
+202 silly ADD node_modules/@esbuild/aix-ppc64
+203 verbose cwd /Users/tinanpha/Desktop/esc_app
+204 verbose os Darwin 25.0.0
+205 verbose node v24.11.0
+206 verbose npm  v11.6.1
+207 verbose exit 0
+208 info ok

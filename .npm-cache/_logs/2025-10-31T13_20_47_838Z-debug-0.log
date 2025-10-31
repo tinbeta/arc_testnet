@@ -1,0 +1,36 @@
+0 verbose cli /Users/tinanpha/.nvm/versions/node/v24.11.0/bin/node /Users/tinanpha/.nvm/versions/node/v24.11.0/bin/npm
+1 info using npm@11.6.1
+2 info using node@v24.11.0
+3 silly config load:file:/Users/tinanpha/.nvm/versions/node/v24.11.0/lib/node_modules/npm/npmrc
+4 silly config load:file:/Users/tinanpha/Desktop/esc_app/.npmrc
+5 silly config load:file:/Users/tinanpha/.npmrc
+6 silly config load:file:/Users/tinanpha/.nvm/versions/node/v24.11.0/etc/npmrc
+7 verbose title npm run compile-and-copy
+8 verbose argv "--workspace" "contracts" "run" "compile-and-copy"
+9 verbose logfile logs-max:10 dir:/Users/tinanpha/Desktop/esc_app/.npm-cache/_logs/2025-10-31T13_20_47_838Z-
+10 verbose logfile /Users/tinanpha/Desktop/esc_app/.npm-cache/_logs/2025-10-31T13_20_47_838Z-debug-0.log
+11 silly logfile done cleaning log files
+12 verbose stack Error: command failed
+12 verbose stack     at promiseSpawn (/Users/tinanpha/.nvm/versions/node/v24.11.0/lib/node_modules/npm/node_modules/@npmcli/promise-spawn/lib/index.js:22:22)
+12 verbose stack     at spawnWithShell (/Users/tinanpha/.nvm/versions/node/v24.11.0/lib/node_modules/npm/node_modules/@npmcli/promise-spawn/lib/index.js:124:10)
+12 verbose stack     at promiseSpawn (/Users/tinanpha/.nvm/versions/node/v24.11.0/lib/node_modules/npm/node_modules/@npmcli/promise-spawn/lib/index.js:12:12)
+12 verbose stack     at runScriptPkg (/Users/tinanpha/.nvm/versions/node/v24.11.0/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/run-script-pkg.js:79:13)
+12 verbose stack     at runScript (/Users/tinanpha/.nvm/versions/node/v24.11.0/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/run-script.js:9:12)
+12 verbose stack     at #run (/Users/tinanpha/.nvm/versions/node/v24.11.0/lib/node_modules/npm/lib/commands/run.js:135:13)
+12 verbose stack     at RunScript.execWorkspaces (/Users/tinanpha/.nvm/versions/node/v24.11.0/lib/node_modules/npm/lib/commands/run.js:67:24)
+12 verbose stack     at async Npm.exec (/Users/tinanpha/.nvm/versions/node/v24.11.0/lib/node_modules/npm/lib/npm.js:208:9)
+12 verbose stack     at async module.exports (/Users/tinanpha/.nvm/versions/node/v24.11.0/lib/node_modules/npm/lib/cli/entry.js:67:5)
+13 verbose pkgid esc_app-contracts@1.0.0
+14 error Lifecycle script `compile-and-copy` failed with error:
+15 error code 1
+16 error path /Users/tinanpha/Desktop/esc_app/contracts
+17 error workspace esc_app-contracts@1.0.0
+18 error location /Users/tinanpha/Desktop/esc_app/contracts
+19 error command failed
+20 error command sh -c npm run compile && node scripts/copyArtifacts.js
+21 verbose cwd /Users/tinanpha/Desktop/esc_app
+22 verbose os Darwin 25.0.0
+23 verbose node v24.11.0
+24 verbose npm  v11.6.1
+25 verbose exit 1
+26 verbose code 1
