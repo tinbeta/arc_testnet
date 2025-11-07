@@ -22,6 +22,9 @@ export const App: React.FC = () => {
 	const [deployed, setDeployed] = useState<DeployedAddresses>({});
 	const [logs, setLogs] = useState<LogItem[]>([]);
 	const [nativeBalance, setNativeBalance] = useState<string>('');
+	const [sendRecipient, setSendRecipient] = useState<string>('');
+	const [sendAmount, setSendAmount] = useState<string>('');
+	const [swapAmount, setSwapAmount] = useState<string>('');
 
 	const signerPromise = useMemo(async () => {
 		if (!provider) return null;
@@ -165,6 +168,52 @@ function getErrorMessage(e: any): string {
 		}
 	}
 
+	async function sendUSDC() {
+		if (!provider || !sendRecipient || !sendAmount) return;
+		setBusy(true);
+		try {
+			const signer = await provider.getSigner();
+			const amount = ethers.parseUnits(sendAmount, 18);
+			const tx = await signer.sendTransaction({
+				to: sendRecipient,
+				value: amount
+			});
+			await tx.wait();
+			pushLog({ type: 'success', message: `Sent ${sendAmount} USDC to ${sendRecipient.slice(0, 6)}…${sendRecipient.slice(-4)}`, href: txLink(tx.hash) });
+			setSendRecipient('');
+			setSendAmount('');
+			// Refresh balance
+			const bal = await provider.getBalance(await signer.getAddress());
+			setNativeBalance(ethers.formatUnits(bal, 18));
+		} catch (e: any) {
+			pushLog({ type: 'error', message: getErrorMessage(e) });
+		} finally {
+			setBusy(false);
+		}
+	}
+
+	async function swapUSDCtoESC() {
+		if (!provider || !deployed.token || !swapAmount) return;
+		setBusy(true);
+		try {
+			const signer = await provider.getSigner();
+			const contract = new Contract(deployed.token, EscbaseTokenArtifact.abi, signer);
+			const usdcAmount = ethers.parseUnits(swapAmount, 18);
+			const tx = await contract.swap({ value: usdcAmount });
+			await tx.wait();
+			const escAmount = usdcAmount * BigInt(100000); // SWAP_RATE = 100000
+			pushLog({ type: 'success', message: `Swapped ${swapAmount} USDC to ${ethers.formatUnits(escAmount, 18)} ESC`, href: txLink(tx.hash) });
+			setSwapAmount('');
+			// Refresh balance
+			const bal = await provider.getBalance(await signer.getAddress());
+			setNativeBalance(ethers.formatUnits(bal, 18));
+		} catch (e: any) {
+			pushLog({ type: 'error', message: getErrorMessage(e) });
+		} finally {
+			setBusy(false);
+		}
+	}
+
 	return (
 		<div style={{ width: '100%', maxWidth: 1240, margin: '0 auto', padding: '24px 20px', fontFamily: 'Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif', color: '#E6EAF2', background: '#0B0F1A', minHeight: '100vh' }}>
 			<h2 style={{ marginBottom: 6, color: '#E6EAF2' }}>ESC Arc Testnet DApp</h2>
@@ -201,6 +250,69 @@ function getErrorMessage(e: any): string {
 					<div style={{ display: 'flex', gap: 8 }}>
 						<button onClick={deployToken} disabled={!provider || busy} style={{ background: '#2C7BE5', color: '#fff', border: 'none', padding: '8px 14px', borderRadius: 8 }}>Deploy</button>
 						<button onClick={mintToken} disabled={!provider || !deployed.token || busy} style={{ background: '#6ECB5A', color: '#0B0F1A', border: 'none', padding: '8px 14px', borderRadius: 8 }}>Mint</button>
+					</div>
+				</div>
+				<div style={{ border: '1px solid #3B476A', padding: 16, borderRadius: 12, background: '#121826' }}>
+					<h3 style={{ margin: '0 0 12px 0', color: '#E6EAF2' }}>Send USDC</h3>
+					<div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+						<div style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
+							<input
+								type="text"
+								placeholder="Recipient address (0x...)"
+								value={sendRecipient}
+								onChange={(e) => setSendRecipient(e.target.value)}
+								disabled={!provider || busy}
+								style={{ flex: 1, padding: '8px 12px', borderRadius: 8, background: '#1F2A44', border: '1px solid #2F3A5C', color: '#E6EAF2' }}
+							/>
+							<button
+								onClick={() => signerAddress && setSendRecipient(signerAddress)}
+								disabled={!provider || busy}
+								style={{ padding: '8px 12px', borderRadius: 8, background: '#2C7BE5', color: '#fff', border: 'none', fontSize: 12 }}
+							>
+								Myself
+							</button>
+						</div>
+						<input
+							type="text"
+							placeholder="Amount (USDC)"
+							value={sendAmount}
+							onChange={(e) => setSendAmount(e.target.value)}
+							disabled={!provider || busy}
+							style={{ padding: '8px 12px', borderRadius: 8, background: '#1F2A44', border: '1px solid #2F3A5C', color: '#E6EAF2' }}
+						/>
+						<button
+							onClick={sendUSDC}
+							disabled={!provider || !sendRecipient || !sendAmount || busy}
+							style={{ background: '#2C7BE5', color: '#fff', border: 'none', padding: '8px 14px', borderRadius: 8 }}
+						>
+							Send
+						</button>
+					</div>
+				</div>
+				<div style={{ border: '1px solid #3B476A', padding: 16, borderRadius: 12, background: '#121826' }}>
+					<h3 style={{ margin: '0 0 12px 0', color: '#E6EAF2' }}>Swap USDC to ESC</h3>
+					<div style={{ marginBottom: 8, color: '#9AA4B2', fontSize: 14 }}>Rate: 0.0001 USDC = 10 ESC</div>
+					{!deployed.token && (
+						<div style={{ border: '1px solid #FF6B6B', background: '#2A1F1F', padding: 10, borderRadius: 8, marginBottom: 12 }}>
+							<span style={{ color: '#FF6B6B' }}>Phải tạo EscbaseToken contract trước</span>
+						</div>
+					)}
+					<div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+						<input
+							type="text"
+							placeholder="Amount (USDC)"
+							value={swapAmount}
+							onChange={(e) => setSwapAmount(e.target.value)}
+							disabled={!provider || !deployed.token || busy}
+							style={{ padding: '8px 12px', borderRadius: 8, background: '#1F2A44', border: '1px solid #2F3A5C', color: '#E6EAF2' }}
+						/>
+						<button
+							onClick={swapUSDCtoESC}
+							disabled={!provider || !deployed.token || !swapAmount || busy}
+							style={{ background: '#1F2A44', color: '#E6EAF2', border: '1px solid #2F3A5C', padding: '8px 14px', borderRadius: 8 }}
+						>
+							Swap
+						</button>
 					</div>
 				</div>
 			</div>

@@ -26,6 +26,7 @@ import type {
 export interface EscbaseTokenInterface extends Interface {
   getFunction(
     nameOrSignature:
+      | "SWAP_RATE"
       | "allowance"
       | "approve"
       | "balanceOf"
@@ -34,6 +35,7 @@ export interface EscbaseTokenInterface extends Interface {
       | "name"
       | "owner"
       | "renounceOwnership"
+      | "swap"
       | "symbol"
       | "totalSupply"
       | "transfer"
@@ -45,6 +47,7 @@ export interface EscbaseTokenInterface extends Interface {
     nameOrSignatureOrTopic: "Approval" | "OwnershipTransferred" | "Transfer"
   ): EventFragment;
 
+  encodeFunctionData(functionFragment: "SWAP_RATE", values?: undefined): string;
   encodeFunctionData(
     functionFragment: "allowance",
     values: [AddressLike, AddressLike]
@@ -68,6 +71,7 @@ export interface EscbaseTokenInterface extends Interface {
     functionFragment: "renounceOwnership",
     values?: undefined
   ): string;
+  encodeFunctionData(functionFragment: "swap", values?: undefined): string;
   encodeFunctionData(functionFragment: "symbol", values?: undefined): string;
   encodeFunctionData(
     functionFragment: "totalSupply",
@@ -86,6 +90,7 @@ export interface EscbaseTokenInterface extends Interface {
     values: [AddressLike]
   ): string;
 
+  decodeFunctionResult(functionFragment: "SWAP_RATE", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "allowance", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "approve", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "balanceOf", data: BytesLike): Result;
@@ -97,6 +102,7 @@ export interface EscbaseTokenInterface extends Interface {
     functionFragment: "renounceOwnership",
     data: BytesLike
   ): Result;
+  decodeFunctionResult(functionFragment: "swap", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "symbol", data: BytesLike): Result;
   decodeFunctionResult(
     functionFragment: "totalSupply",
@@ -205,6 +211,8 @@ export interface EscbaseToken extends BaseContract {
     event?: TCEvent
   ): Promise<this>;
 
+  SWAP_RATE: TypedContractMethod<[], [bigint], "view">;
+
   allowance: TypedContractMethod<
     [owner: AddressLike, spender: AddressLike],
     [bigint],
@@ -233,6 +241,8 @@ export interface EscbaseToken extends BaseContract {
 
   renounceOwnership: TypedContractMethod<[], [void], "nonpayable">;
 
+  swap: TypedContractMethod<[], [void], "payable">;
+
   symbol: TypedContractMethod<[], [string], "view">;
 
   totalSupply: TypedContractMethod<[], [bigint], "view">;
@@ -259,6 +269,9 @@ export interface EscbaseToken extends BaseContract {
     key: string | FunctionFragment
   ): T;
 
+  getFunction(
+    nameOrSignature: "SWAP_RATE"
+  ): TypedContractMethod<[], [bigint], "view">;
   getFunction(
     nameOrSignature: "allowance"
   ): TypedContractMethod<
@@ -295,6 +308,9 @@ export interface EscbaseToken extends BaseContract {
   getFunction(
     nameOrSignature: "renounceOwnership"
   ): TypedContractMethod<[], [void], "nonpayable">;
+  getFunction(
+    nameOrSignature: "swap"
+  ): TypedContractMethod<[], [void], "payable">;
   getFunction(
     nameOrSignature: "symbol"
   ): TypedContractMethod<[], [string], "view">;
